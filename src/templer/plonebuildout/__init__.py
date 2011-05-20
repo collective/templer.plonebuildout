@@ -1,0 +1,2 @@
+from templer.plonebuildout.plone3_buildout import Plone3Buildout
+from templer.plonebuildout.plone4_buildout import Plone4Buildout
