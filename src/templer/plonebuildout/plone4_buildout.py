@@ -52,10 +52,7 @@ http://templer-manual.readthedocs.org
            [ VAR_PLONEVER,           
         ]
     )
-    
-    # Set default Plone 4 version
-    vars[0].default = LATEST_PLONE_VERSIONS[-1],
-    
+
     def pre(self, command, output_dir, vars):
         
         # For easy mode (don't ask stupid questions)
