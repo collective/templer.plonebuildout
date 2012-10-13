@@ -45,6 +45,7 @@ http://templer-manual.readthedocs.org
 
     vars = copy.deepcopy(abstract_buildout.AbstractBuildout.vars)
     
+    # remove easy/expert mode (for now)
     vars = vars[1:]
     
     vars.extend(
