@@ -38,7 +38,7 @@ http://plone.org/products/zopeskel
     )
     
     # Set default Plone 4 version
-    vars[0].default = "4.0.5"
+    vars[0].default = "4.2.1"
     
     def pre(self, command, output_dir, vars):
         
@@ -46,7 +46,6 @@ http://plone.org/products/zopeskel
         vars['expert_mode'] = 'easy' 
         vars['eggifiedzope'] = True
         vars['zope2_install'] = True
-        vars['zope2_version'] = "2.12.3"
         super(Plone4Buildout, self).pre(command, output_dir, vars)
 
 
