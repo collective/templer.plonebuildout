@@ -34,9 +34,9 @@ python bootstrap.by
 
 bin/buildout
 
-See ZopeSkel add-on page for more details:
+See Templer add-on page for more details:
 
-http://plone.org/products/zopeskel 
+http://templer-manual.readthedocs.org
 
 """
 
