@@ -1,6 +1,21 @@
 import copy
 
 from templer.plonebuildout import abstract_buildout
+from templer.core.vars import StringVar
+
+LATEST_PLONE_VERSIONS = ['4.0.10','4.1.6','4.2.1']
+
+VAR_PLONEVER = StringVar(
+    'plone_version',
+    title='Plone Version',
+    description='Plone version # to install, latest are %s.' %' '.join(LATEST_PLONE_VERSIONS),
+    default=LATEST_PLONE_VERSIONS[-1],
+    page='Main',
+    help="""
+This is the version of Plone that will be used for this buildout.
+You should enter the version number you wish to use.
+"""
+    )
 
 class Plone4Buildout(abstract_buildout.AbstractBuildout):
     _template_dir = 'templates/plone4_buildout'
@@ -33,12 +48,12 @@ http://plone.org/products/zopeskel
     vars = vars[1:]
     
     vars.extend(
-           [ abstract_buildout.VAR_PLONEVER,           
+           [ VAR_PLONEVER,           
         ]
     )
     
     # Set default Plone 4 version
-    vars[0].default = "4.2.1"
+    vars[0].default = LATEST_PLONE_VERSIONS[-1],
     
     def pre(self, command, output_dir, vars):
         
