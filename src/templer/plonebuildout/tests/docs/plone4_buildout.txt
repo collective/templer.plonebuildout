@@ -2,10 +2,10 @@
 plone template
 ==============
 
-Use paster::
+Use templer::
 
-    >>> paster('create -t plone4_buildout buildout --no-interactive')
-    paster create -t plone4_buildout buildout --no-interactive
+    >>> templer('plone4_buildout buildout --no-interactive')
+    templer plone4_buildout buildout --no-interactive
     ...
 
 Let's check the content::
